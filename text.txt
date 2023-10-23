@@ -1,0 +1,228 @@
+  <section class="certificates section">
+         <div class="container section__inner">
+            <div class="courses__descr section__descr">
+               <h2 class="title">
+                  Сертифікати якості
+               </h2>
+               <p class="section__text">
+                  Сертифікати забезпечують додаткову довіру та впевненість для наших клієнтів.
+               </p>
+            </div>
+            <div class="certificates__content section--decor">
+               <div class="certificates__slider">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <img src="images/sert-1.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="images/sert-2.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="images/sert-1.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="images/sert-2.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="images/sert-1.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="images/sert-2.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="images/sert-1.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="images/sert-2.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="images/sert-1.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="images/sert-2.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="images/sert-1.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="images/sert-2.jpg" alt="">
+                     </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+
+
+
+
+      .accordeon__text.accordeon__text--visible{
+   opacity: 1;
+}
+/////
+css
+.accordeon__item {
+   background-color: #fafafa;
+   margin-bottom: 10px;
+}
+
+.accordeon__text {
+   opacity: 0;
+   max-height: 0;
+   padding: 20px 40px;
+}
+
+.accordeon__title {
+   font-family: 'Yeseva One', cursive;
+   font-size: 16px;
+   display: block;
+   width: 100%;
+   text-align: left;
+   background-color: transparent;
+   padding: 16px 50px 16px 13px;
+   position: relative;
+}
+.accordeon__title::after{
+   content: "";
+   background-image: url(../images/arrow.svg);
+   right: 26px;
+   top: 17px;
+   width: 16px;
+   height: 16px;
+   position: absolute;
+}
+/////////////////////
+
+
+js
+////
+const accordeon = document.querySelector('.accordeon');
+const accordeonTitles = accordeon.querySelectorAll('.accordeon__title');
+
+accordeonTitles.forEach.call(accordeonTitles, function (accordeonTitle) {
+   accordeonTitle.addEventListener('click', function () {
+
+      const currentText = accordeonTitle.parentElement.querySelector('.accordeon__text');
+      
+      accordeonTitle.classList.toggle('accordeon__title--active');
+      currentText.classList.toggle('accordeon__text--visible');
+      
+if(currentText.classList.contains('accordeon__text--visible')) {
+   currentText.style.maxHeight = currentText.scrollHeight + 'px'
+
+} else{
+   currentText.style.maxHeight = null
+}
+
+   });
+});
+//////////
+  <div class="accordeon">
+                  <div class="accordeon__item">
+                     <button class="accordeon__title">Які запахи доступні для свічок?</button>
+                     <div class="accordeon__text">
+                        <ol>
+                           <li class="accordeon__text">Ваніль - теплий, сладкий і затишний аромат, який нагадує про
+                              домашній затишок.</li>
+                           <li class="accordeon__text">Лаванда - приємний, успокійливий і релаксуючий запах, який
+                              допомагає зняти стрес і напругу.</li>
+                           <li class="accordeon__text">Рожевий грейпфрут - свіжий, фруктовий і енергійний аромат, який
+                              допомагає підняти настрій і збадьорити.</li>
+                           <li class="accordeon__text">Кедр - деревний, земний і маскулінний аромат, який надає відчуття
+                              стабільності і надійності.</li>
+                           <li class="accordeon__text">Яблуко і кориця - теплий і затишний аромат, який нагадує про
+                              зимові свята і домашність.</li>
+                        </ol>
+                     </div>
+                  </div>
+                  <div class="accordeon__item">
+                     <button class="accordeon__title">Як довго горять свічки?</button>
+                     <div class="accordeon__text">
+                        <ol>
+                           <li class="accordeon__text">Ваніль - теплий, сладкий і затишний аромат, який нагадує про
+                              домашній затишок.</li>
+                           <li class="accordeon__text">Лаванда - приємний, успокійливий і релаксуючий запах, який
+                              допомагає зняти стрес і напругу.</li>
+                           <li class="accordeon__text">Рожевий грейпфрут - свіжий, фруктовий і енергійний аромат, який
+                              допомагає підняти настрій і збадьорити.</li>
+                           <li class="accordeon__text">Кедр - деревний, земний і маскулінний аромат, який надає відчуття
+                              стабільності і надійності.</li>
+                           <li class="accordeon__text">Яблуко і кориця - теплий і затишний аромат, який нагадує про
+                              зимові свята і домашність.</li>
+                        </ol>
+                     </div>
+                  </div>
+                  <div class="accordeon__item">
+                     <button class="accordeon__title">Чи можна зробити замовлення на індивідуальний дизайн
+                        свічки?</button>
+                     <div class="accordeon__text">
+                        <ol>
+                           <li class="accordeon__text">Ваніль - теплий, сладкий і затишний аромат, який нагадує про
+                              домашній затишок.</li>
+                           <li class="accordeon__text">Лаванда - приємний, успокійливий і релаксуючий запах, який
+                              допомагає зняти стрес і напругу.</li>
+                           <li class="accordeon__text">Рожевий грейпфрут - свіжий, фруктовий і енергійний аромат, який
+                              допомагає підняти настрій і збадьорити.</li>
+                           <li class="accordeon__text">Кедр - деревний, земний і маскулінний аромат, який надає відчуття
+                              стабільності і надійності.</li>
+                           <li class="accordeon__text">Яблуко і кориця - теплий і затишний аромат, який нагадує про
+                              зимові свята і домашність.</li>
+                        </ol>
+                     </div>
+                  </div>
+                  <div class="accordeon__item">
+                     <button class="accordeon__title">Які є варіанти доставки?</button>
+                     <div class="accordeon__text">
+                        <ol>
+                           <li class="accordeon__text">Ваніль - теплий, сладкий і затишний аромат, який нагадує про
+                              домашній затишок.</li>
+                           <li class="accordeon__text">Лаванда - приємний, успокійливий і релаксуючий запах, який
+                              допомагає зняти стрес і напругу.</li>
+                           <li class="accordeon__text">Рожевий грейпфрут - свіжий, фруктовий і енергійний аромат, який
+                              допомагає підняти настрій і збадьорити.</li>
+                           <li class="accordeon__text">Кедр - деревний, земний і маскулінний аромат, який надає відчуття
+                              стабільності і надійності.</li>
+                           <li class="accordeon__text">Яблуко і кориця - теплий і затишний аромат, який нагадує про
+                              зимові свята і домашність.</li>
+                        </ol>
+                     </div>
+                  </div>
+                  <div class="accordeon__item">
+                     <button class="accordeon__title">Як оплачувати замовлення?</button>
+                     <div class="accordeon__text">
+                        <ol>
+                           <li class="accordeon__text">Ваніль - теплий, сладкий і затишний аромат, який нагадує про
+                              домашній затишок.</li>
+                           <li class="accordeon__text">Лаванда - приємний, успокійливий і релаксуючий запах, який
+                              допомагає зняти стрес і напругу.</li>
+                           <li class="accordeon__text">Рожевий грейпфрут - свіжий, фруктовий і енергійний аромат, який
+                              допомагає підняти настрій і збадьорити.</li>
+                           <li class="accordeon__text">Кедр - деревний, земний і маскулінний аромат, який надає відчуття
+                              стабільності і надійності.</li>
+                           <li class="accordeon__text">Яблуко і кориця - теплий і затишний аромат, який нагадує про
+                              зимові свята і домашність.</li>
+                        </ol>
+                     </div>
+                  </div>
+                  <div class="accordeon__item">
+                     <button class="accordeon__title">Як довго триває курс?</button>
+                     <div class="accordeon__text">
+                        <ol>
+                           <li class="accordeon__text">Ваніль - теплий, сладкий і затишний аромат, який нагадує про
+                              домашній затишок.</li>
+                           <li class="accordeon__text">Лаванда - приємний, успокійливий і релаксуючий запах, який
+                              допомагає зняти стрес і напругу.</li>
+                           <li class="accordeon__text">Рожевий грейпфрут - свіжий, фруктовий і енергійний аромат, який
+                              допомагає підняти настрій і збадьорити.</li>
+                           <li class="accordeon__text">Кедр - деревний, земний і маскулінний аромат, який надає відчуття
+                              стабільності і надійності.</li>
+                           <li class="accordeon__text">Яблуко і кориця - теплий і затишний аромат, який нагадує про
+                              зимові свята і домашність.</li>
+                        </ol>
+                     </div>
+                  </div>
+                  
+               </div>
