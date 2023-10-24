@@ -1172,7 +1172,18 @@ main {
    }
 }
 
+@media (max-width: 460px) {
+   .feedback__item-text {
+      font-size: 10px;
+      padding-right: 100px;
+   }
+}
 
+@media (max-width: 430px) {
+   .products__item-img {
+      width: 150px;
+   }
+}
 
 @media (max-width: 404px) {
    .steps__list {
@@ -1215,6 +1226,14 @@ main {
 
    .certificates__slider {
       width: 200px;
+   }
+
+   .products__item {
+      width: 150px;
+   }
+
+   .products__content {
+      gap: 30px 0px;
    }
 }
 
